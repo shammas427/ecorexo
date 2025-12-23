@@ -134,62 +134,29 @@
 </body>
 </html>
 
-<form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="b1c31134-8e32-4c8a-bdeb-b86ba06e5495">
-  <input type="text" name="name" required>
-  <input type="email" name="email" required>
-  <textarea name="message" required></textarea>
-  <button type="submit">Submit Form</button>
-</form>
-
 <div class="card">
     <h3>Contact Me</h3>
-    <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+    <form action="https://api.web3forms.com/submit" method="POST">
         
         <input type="hidden" name="access_key" value="b1c31134-8e32-4c8a-bdeb-b86ba06e5495">
         
         <input type="email" name="email" placeholder="Your Email" required>
         <textarea name="message" placeholder="Your Message" rows="4" required></textarea>
         
-        <button type="submit" id="submitBtn">Send Message</button>
+        <input type="hidden" name="from_name" value="Miuxoo App User">
+        <input type="hidden" name="subject" value="New Message from Miuxoo App">
+
+        <button type="submit">Send Message</button>
     </form>
 </div>
 
-<script>
-    // ... (Keep your existing counter and theme logic here) ...
-
-    const contactForm = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-
-    contactForm.addEventListener('submit', function() {
-        // Disable the button to prevent double-clicks
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = "0.7";
-        submitBtn.style.cursor = "not-allowed";
-        
-        // Change text to show activity
-        submitBtn.innerHTML = `
-            <span style="display: flex; align-items: center; justify-content: center; gap: 10px;">
-                Sending... <div class="spinner"></div>
-            </span>
-        `;
-    });
-</script>
-
-<style>
-    /* Adding a simple CSS spinner */
-    .spinner {
-        width: 16px;
-        height: 16px;
-        border: 2px solid #ffffff;
-        border-bottom-color: transparent;
-        border-radius: 50%;
-        display: inline-block;
-        animation: rotation 1s linear infinite;
-    }
-
-    @keyframes rotation {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-</style>
+<div class="card">
+    <h3>Follow My Journey</h3>
+    <p>Watch tutorials and updates on YouTube</p>
+    <a href="https://www.youtube.com/@aimiuxo" target="_blank" style="text-decoration: none;">
+        <button style="background: #FF0000; display: flex; align-items: center; justify-content: center; gap: 10px;">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            Subscribe to @aimiuxo
+        </button>
+    </a>
+</div>
