@@ -5,11 +5,14 @@
 [![PWA Status](https://img.shields.io/badge/PWA-Ready-blueviolet.svg)](https://web.dev/progressive-web-apps/)
 A lightweight, high-performance "Single Page Application" (SPA) template featuring theme persistence, data storage, and mobile installation capabilities.
 
-## 📺 Connect with Me
-Check out my YouTube channel for project walkthroughs: [@aimiuxo](https://www.youtube.com/@aimiuxo)
+# 🚀 Miuxo PWA
+**Official Website:** [miuxo.in](https://miuxo.in)
 
-# 🚀 Miuxoo PWA
-**Live Site:** [https://miuxo.in](https://miuxo.in)
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://miuxo.in)
+[![Instagram](https://img.shields.io/badge/Instagram-@aimiuxo-E4405F?style=flat&logo=instagram&logoColor=white)](https://www.instagram.com/aimiuxo/)
+[![YouTube](https://img.shields.io/badge/YouTube-@aimiuxo-red?style=flat&logo=youtube&logoColor=white)](https://www.youtube.com/@aimiuxo)
+
+A lightweight, high-performance Progressive Web App featuring theme persistence, data storage, and mobile installation.
 
 [![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://miuxo.in)
 [![YouTube](https://img.shields.io/badge/YouTube-@aimiuxo-red.svg)](https://www.youtube.com/@aimiuxo)
