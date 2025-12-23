@@ -5,6 +5,9 @@
 [![PWA Status](https://img.shields.io/badge/PWA-Ready-blueviolet.svg)](https://web.dev/progressive-web-apps/)
 A lightweight, high-performance "Single Page Application" (SPA) template featuring theme persistence, data storage, and mobile installation capabilities.
 
+## 📺 Connect with Me
+Check out my YouTube channel for project walkthroughs: [@aimiuxo](https://www.youtube.com/@aimiuxo)
+
 ## ✨ Key Features
 
 - **🌙 Smart Dark Mode:** Automatically detects and saves user preference using CSS Variables.
