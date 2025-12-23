@@ -1,6 +1,6 @@
 # My Web App Project
 
-[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://YOUR_USERNAME.github.io/YOUR_REPO_NAME/)
+[![Live Demo](https://img.shields.io/badge/demo-online-brightgreen.svg)](https://shammas427.github.io/miuxo/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 A lightweight, single-file web application built with HTML, CSS, and Vanilla JavaScript.
@@ -13,4 +13,4 @@ A lightweight, single-file web application built with HTML, CSS, and Vanilla Jav
 ## 🛠️ Installation
 Simply clone the repository and open `index.html`:
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
+git clone [https://github.com/shammas427/miuxo.git](https://github.com/shammas427/miuxo.git)
