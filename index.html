@@ -8,14 +8,8 @@
     <link rel="manifest" href="manifest.json">
     <meta name="theme-color" content="#2563eb">
     <link rel="apple-touch-icon" href="icon-192.png">
-    <meta name="description" content="Official Miuxo Brand Hub - Shop and Join our Community">
-    
-    <meta property="og:title" content="ᴇᴄᴏʀᴇxᴏ | Official">
-    <meta property="og:description" content="Shop online at Miuxo India and explore AI tools.">
-    <meta property="og:image" content="icon-512.png">
 
     <style>
-        /* Your existing CSS remains here */
         :root {
             --bg: #ffffff;
             --card-bg: #f8fafc;
@@ -40,9 +34,10 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            min-height: 100vh;
         }
 
-        .container { width: 100%; max-width: 400px; }
+        .container { width: 100%; max-width: 400px; display: none; } /* Hidden until login */
 
         .card {
             background: var(--card-bg);
@@ -51,20 +46,10 @@
             padding: 1.5rem;
             margin-bottom: 20px;
             text-align: center;
-            transition: transform 0.2s ease;
         }
 
-        h2, h3 {
-            font-size: 1.3rem;
-            margin: 0 0 5px 0;
-            text-transform: uppercase;
-        }
-
-        p {
-            font-size: 0.85rem;
-            opacity: 0.7;
-            margin-bottom: 15px;
-        }
+        h2, h3 { font-size: 1.3rem; margin: 0 0 5px 0; text-transform: uppercase; }
+        p { font-size: 0.85rem; opacity: 0.7; margin-bottom: 15px; }
 
         button {
             width: 100%;
@@ -74,137 +59,110 @@
             font-weight: 700;
             text-transform: uppercase;
             cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
             transition: all 0.2s;
         }
 
-        button:active {
-            transform: scale(0.98);
-        }
-
-        .social-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 12px;
-        }
-
-        /* Video Styling */
-        .video-container {
-            position: relative;
-            padding-bottom: 177.77%; 
-            height: 0;
-            border-radius: 12px;
-            overflow: hidden;
-            background: #000;
-            margin-bottom: 10px;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            border: none;
-        }
-
-        input, textarea {
+        input {
             width: 100%;
             padding: 12px;
             margin-bottom: 10px;
             border-radius: 8px;
             border: 1px solid var(--border);
             box-sizing: border-box;
-            background: var(--bg);
-            color: var(--text);
+            text-align: center;
         }
+
+        /* Login Overlay Styling */
+        #login-overlay {
+            position: fixed;
+            inset: 0;
+            background: var(--bg);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .social-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .video-container { position: relative; padding-bottom: 177.77%; height: 0; border-radius: 12px; overflow: hidden; background: #000; margin-bottom: 10px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
     </style>
 </head>
 <body>
 
-<script>
-    // SERVICE WORKER REGISTRATION (Essential for PWA)
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-            navigator.serviceWorker.register('/sw.js')
-                .then(reg => console.log('Service Worker Registered'))
-                .catch(err => console.log('Service Worker Failed', err));
-        });
-    }
-</script>
-</body>
-</html>
+<div id="login-overlay">
+    <div class="card" style="width: 100%; max-width: 320px;">
+        <h2 style="letter-spacing: 2px;">🔐 ᴍɪᴜxᴏ ᴀᴄᴄᴇꜱꜱ</h2>
+        <p>Enter your official access code</p>
+        <input type="password" id="pass-input" placeholder="••••••••">
+        <button onclick="checkPass()" style="background: var(--accent); color: white;">Unlock Brand Hub</button>
+        <p id="error-msg" style="color: #ef4444; display: none; margin-top: 15px; font-weight: bold;">❌ Incorrect Code!</p>
+    </div>
+</div>
 
-<div class="container">
+<div class="container" id="main-content">
 
     <div class="card" style="border-top: 5px solid var(--accent);">
-        <h2 style="letter-spacing: 2px;"> MIUXO</h2>
+        <h2 style="letter-spacing: 2px;">MIUXO</h2>
         <p style="font-weight: bold; color: var(--accent);">ᴏꜰꜰɪᴄɪᴀʟ ʙʀᴀɴᴅ ʜᴜʙ</p>
-        <p>ꜱʜᴏᴘ ᴏɴʟɪɴᴇ ᴀᴛ ᴍɪᴜxᴏ ɪɴᴅɪᴀ</p>
-        <a href="https://miuxo.in" target="_blank" style="text-decoration: none;">
-            <button style="background: var(--accent); color: white; box-shadow: 0 4px 0 #1e40af;">
-                🌐  MY WEBSITE
-            </button>
+        <a href="https://miuxo.in" target="_blank">
+            <button style="background: var(--accent); color: white;">🌐 MY WEBSITE</button>
         </a>
     </div>
 
     <div class="card">
-        <h3>FEATURED SHORT</h3>
+        <h3>ꜰᴇᴀᴛᴜʀᴇᴅ ꜱʜᴏʀᴛ</h3>
         <div class="video-container">
-            <iframe 
-                src="https://www.youtube.com/embed/u28pkQXq67k" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
+            <iframe src="https://www.youtube.com/embed/u28pkQXq67k"></iframe>
         </div>
-        <p>Boost your Shopify sales with analytics insights.</p>
     </div>
 
     <div class="card">
-        <h2 style="letter-spacing: 1px;">SHOPIFY</h2>
-        <p>ᴘʀᴇᴍɪᴜᴍ ᴅɪɢɪᴛᴀʟ ꜱᴛᴏʀᴇ ʙᴜɪʟᴅᴇʀ</p>
-        <a href="https://www.shopify.com/" target="_blank" style="text-decoration: none;">
-            <button style="background: #95bf47; color: white; box-shadow: 0 4px 0 #5e8e3e;">
-                🛍️ SHOPIFY WEBSITE
-            </button>
-        </a>
-    </div>
-
-    <div class="card">
-        <h2 style="letter-spacing: 1px;">SUPERPROFILE</h2>
-        <p>ɪɴꜱᴛᴀɢʀᴀᴍ ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ & ʟɪɴᴋꜱ</p>
-        <a href="https://superprofile.bio/aimiuxo" target="_blank" style="text-decoration: none;">
-            <button style="background: #000000; color: white; border: 1px solid #333; box-shadow: 0 4px 0 #222;">
-                🚀 SUPERPROFILE WEBSITE
-            </button>
-        </a>
-    </div>
-
-    <div class="card">
-        <h2 style="letter-spacing: 1px;">VEED AI</h2>
-        <p>ꜰʀᴇᴇ ᴀɪ ᴠɪᴅᴇᴏ ᴄʀᴇᴀᴛɪᴏɴ ᴛᴏᴏʟꜱ</p>
-        <a href="https://www.veed.io/tools/ai-video" target="_blank" style="text-decoration: none;">
-            <button style="background: linear-gradient(90deg, #7c3aed 0%, #2563eb 100%); color: white;">
-                🎬 VEED AI WEBSITE
-            </button>
-        </a>
-    </div>
-
-    <div class="card" style="border: 1px dashed var(--accent);">
         <h3>JOIN THE COMMUNITY</h3>
-        <p>ꜰᴏʟʟᴏᴡ ꜰᴏʀ ᴅᴀɪʟʏ ᴜᴘᴅᴀᴛᴇꜱ</p>
         <div class="social-grid">
-            <a href="https://www.youtube.com/@aimiuxo" target="_blank" style="text-decoration: none;">
-                <button style="background: #FF0000; color: white; margin: 0;">YOUTUBE</button>
+            <a href="https://www.youtube.com/@aimiuxo" target="_blank" style="text-decoration:none">
+                <button style="background: #FF0000; color: white;">YOUTUBE</button>
             </a>
-            <a href="https://www.instagram.com/aimiuxo/" target="_blank" style="text-decoration: none;">
-                <button style="background: #E4405F; color: white; margin: 0;">Instagram</button>
+            <a href="https://www.instagram.com/aimiuxo/" target="_blank" style="text-decoration:none">
+                <button style="background: #E4405F; color: white;">INSTAGRAM</button>
             </a>
         </div>
     </div>
 
-<a href="mailto:your-shammas78099@gmail.com" style="text-decoration: none;">
-    <button style="background: #f1f5f9; color: #0f172a; margin-top: 10px; border: 1px solid #e2e8f0;">
-        ✉️ Email Support
-    </button>
-</a>
+    <button onclick="logout()" style="background: transparent; color: var(--text); border: 1px solid var(--border); font-size: 0.7rem; margin-top: 20px;">Logout / Lock Hub</button>
+</div>
+
+<script>
+    const ACCESS_CODE = "MIUXO2025"; // CHANGE YOUR PASSWORD HERE
+
+    function checkPass() {
+        const input = document.getElementById('pass-input').value;
+        if (input === ACCESS_CODE) {
+            unlockHub();
+        } else {
+            document.getElementById('error-msg').style.display = 'block';
+        }
+    }
+
+    function unlockHub() {
+        document.getElementById('login-overlay').style.display = 'none';
+        document.getElementById('main-content').style.display = 'block';
+        localStorage.setItem('miuxo_logged_in', 'true');
+    }
+
+    function logout() {
+        localStorage.removeItem('miuxo_logged_in');
+        location.reload();
+    }
+
+    // Auto-login if previously verified
+    window.onload = () => {
+        if (localStorage.getItem('miuxo_logged_in') === 'true') {
+            unlockHub();
+        }
+    };
+</script>
+
+</body>
+</html>
