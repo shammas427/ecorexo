@@ -1,15 +1,18 @@
 {
-  "name": "Miuxo PWA",
+  "name": "Miuxo Official Brand Hub",
   "short_name": "Miuxo",
-  "start_url": "index.html",
+  "description": "Official Brand Hub for Miuxo India - Shopify & AI Tools",
+  "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#f0f2f5",
+  "background_color": "#0f172a",
   "theme_color": "#2563eb",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "icon-512.png",
